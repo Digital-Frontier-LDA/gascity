@@ -17,7 +17,7 @@
 # Local build-layer image produced by Dockerfile.base, not a registry pull.
 ARG BASE_IMAGE=gc-agent-base:latest
 
-FROM golang:1.26.6-bookworm@sha256:433f9dc4f8ea3a1ce4e28f9f15d0f7c056b10475307f886d6f1ac1ccc4abd976 AS bd-builder
+FROM golang:1.26.10-bookworm@sha256:632dff7351799a5a9954a48dc06670ade72ee44e8c351cdc0e5a57af2fea21af AS bd-builder
 
 ARG BD_VERSION=v1.1.0
 ARG BD_SOURCE_REF=bf97b73749ac3ef2fca2365b54537ac041ad4293
