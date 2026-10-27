@@ -48,6 +48,9 @@ jobs:
           version: "~> v2"
           args: release --snapshot --clean
 
+      - name: Verify gc Go toolchain floor
+        run: scripts/check-go-toolchain-floor.sh dist/gascity_linux_amd64_v1/gc go.mod
+
       - name: Publish rolling edge pre-release
         env:
           GH_TOKEN: ${{ github.token }}
